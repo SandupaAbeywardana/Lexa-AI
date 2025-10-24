@@ -21,14 +21,19 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          {/* <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
               <span className="text-primary font-bold text-xl">AI</span>
             </div>
             <span className="text-white font-bold text-lg hidden sm:inline">
-              Research Project
+              Lexa AI
             </span>
-          </Link>
+          </Link> */}
+          <img
+            src="/images/whiteLogo.png"
+            alt="Lexa AI Logo"
+            className="h-12 w-auto"
+          />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-1">

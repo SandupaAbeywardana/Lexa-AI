@@ -1,4 +1,5 @@
 import { projectData } from "@/data/projectData";
+import { Icon } from "@iconify/react";
 
 export default function About() {
   return (
@@ -26,29 +27,55 @@ export default function About() {
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {projectData.team.map((member) => (
               <div
                 key={member.id}
                 className="card overflow-hidden hover:shadow-lg transition-shadow"
               >
                 {/* Profile Image */}
-                <div className="w-full h-48 bg-gradient-primary flex items-center justify-center">
-                  <span className="text-5xl">👤</span>
+                <div className="w-full h-64 bg-gradient-primary flex items-center justify-center overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Member Info */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                  <p className="text-primary font-semibold mb-3">
+                  <p className="text-md text-primary font-semibold mb-4">
                     {member.role}
                   </p>
-                  <a
-                    href={`mailto:${member.email}`}
-                    className="text-sm text-gray-600 hover:text-primary transition-colors"
-                  >
-                    {member.email}
-                  </a>
+                  {/* Social Links */}
+                  <div className="flex space-x-3">
+                    <a
+                      href={`mailto:${member.email}`}
+                      title="Email"
+                      className="text-gray-500 hover:text-primary transition-colors"
+                    >
+                      <Icon icon="mdi:email" width={25} height={25} />
+                    </a>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="GitHub"
+                      className="text-gray-500 hover:text-primary transition-colors"
+                    >
+                      <Icon icon="mdi:github" width={25} height={25} />
+                    </a>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="LinkedIn"
+                      className="text-gray-500 hover:text-primary transition-colors"
+                    >
+                      <Icon icon="mdi:linkedin" width={25} height={25} />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

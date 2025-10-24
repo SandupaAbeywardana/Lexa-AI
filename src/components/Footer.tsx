@@ -4,10 +4,14 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white mt-20">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-16 mb-8">
           {/* About */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">About Project</h3>
+          <div className="md:col-span-2">
+            <img
+              src="/images/whiteLogo.png"
+              alt="Project Logo"
+              className="h-14 w-auto mb-6"
+            />
             <p className="text-gray-400 text-sm">
               AI-Assisted Criminal Investigation Platform - A research
               initiative focused on leveraging machine learning and NLP for
@@ -83,15 +87,28 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              &copy; {currentYear} AI-Assisted Criminal Investigation Platform.
-              All rights reserved.
-            </p>
+            <div className="flex items-center space-x-2">
+              <p className="text-gray-400 text-sm">
+                &copy; {currentYear} LexaAI. All rights reserved.
+              </p>
+              <span className="text-gray-600 hidden md:inline">•</span>
+              <p className="text-gray-500 text-sm md:ml-2">
+                Built with ❤️ by{" "}
+                <span className="text-white font-semibold">Team LexaAI</span>
+              </p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm">
+              <span className="text-gray-600">•</span>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
                 Terms of Service
               </a>
             </div>

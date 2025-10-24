@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="gradient-primary text-white py-20">
+      <section className="gradient-primary text-white pt-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="pb-20">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 {projectData.name}
               </h1>
@@ -30,9 +30,11 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-64 h-64 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                <span className="text-6xl">🤖</span>
-              </div>
+              <img
+                src="/images/lexaRobo.png"
+                alt="Hero Image"
+                className="w-full max-w-md"
+              />
             </div>
           </div>
         </div>

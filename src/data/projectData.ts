@@ -171,9 +171,9 @@ export const projectData = {
 
   // Contact information - Replace with actual details
   contact: {
-    email: "[Your Email]",
-    phone: "[Your Phone]",
-    address: "[Your Address]",
-    institution: "[Your Institution]",
+    email: "help@lexa.ai",
+    phone: "+44 1234 567890",
+    address: "123 Investigation Ave, London, UK",
+    institution: "Lexa AI Research Institute",
   },
 };

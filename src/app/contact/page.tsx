@@ -54,39 +54,45 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Email */}
-              <div className="card p-6">
-                <div className="text-3xl mb-3">✉️</div>
-                <h3 className="text-lg font-bold mb-2">Email</h3>
-                <a
-                  href={`mailto:${projectData.contact.email}`}
-                  className="text-primary hover:text-secondary transition-colors"
-                >
-                  {projectData.contact.email || "[Your Email]"}
-                </a>
+              <div className="card p-6 flex items-center gap-4">
+                <div className="text-3xl">✉️</div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Email</h3>
+                  <a
+                    href={`mailto:${projectData.contact.email}`}
+                    className="text-primary hover:text-secondary transition-colors"
+                  >
+                    {projectData.contact.email || "[Your Email]"}
+                  </a>
+                </div>
               </div>
 
               {/* Phone */}
-              <div className="card p-6">
-                <div className="text-3xl mb-3">📞</div>
-                <h3 className="text-lg font-bold mb-2">Phone</h3>
-                <a
-                  href={`tel:${projectData.contact.phone}`}
-                  className="text-primary hover:text-secondary transition-colors"
-                >
-                  {projectData.contact.phone || "[Your Phone]"}
-                </a>
+              <div className="card p-6 flex items-center gap-4">
+                <div className="text-3xl">📞</div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Phone</h3>
+                  <a
+                    href={`tel:${projectData.contact.phone}`}
+                    className="text-primary hover:text-secondary transition-colors"
+                  >
+                    {projectData.contact.phone || "[Your Phone]"}
+                  </a>
+                </div>
               </div>
 
               {/* Address */}
-              <div className="card p-6">
-                <div className="text-3xl mb-3">📍</div>
-                <h3 className="text-lg font-bold mb-2">Address</h3>
-                <p className="text-gray-700">
-                  {projectData.contact.address || "[Your Address]"}
-                </p>
-                <p className="text-gray-600 mt-2 text-sm">
-                  {projectData.contact.institution || "[Your Institution]"}
-                </p>
+              <div className="card p-6 flex items-center gap-4">
+                <div className="text-3xl">📍</div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Address</h3>
+                  <p className="text-gray-700">
+                    {projectData.contact.address || "[Your Address]"}
+                  </p>
+                  <p className="text-gray-600 mt-2 text-sm">
+                    {projectData.contact.institution || "[Your Institution]"}
+                  </p>
+                </div>
               </div>
 
               {/* Quick Links */}
@@ -198,7 +204,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
+                      rows={3}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                       placeholder="Your message here..."
                     />
@@ -225,7 +231,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitStatus === "loading"}
-                    className="w-full px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {submitStatus === "loading" ? "Sending..." : "Send Message"}
                   </button>
@@ -244,10 +250,17 @@ export default function Contact() {
       <section className="py-16 bg-gray-100">
         <div className="container-custom">
           <h2 className="section-title text-center">Find Us</h2>
-          <div className="w-full h-96 bg-gray-300 rounded-lg flex items-center justify-center">
-            <p className="text-gray-600 text-lg">
-              [Map placeholder - Add your location map here]
-            </p>
+          <div className="w-full h-96 bg-gray-300 rounded-lg overflow-hidden shadow-lg border-0">
+            <iframe
+              width="100%"
+              height="100%"
+              className="border-0"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3616.0548284707406!2d-71.00163592407476!3d24.998252839729112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU5JzUzLjciTiA3MMKwNTknNTYuNiJX!5e0!3m2!1sen!2slk!4v1761322608979!5m2!1sen!2slk"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lexa AI"
+            ></iframe>
           </div>
         </div>
       </section>

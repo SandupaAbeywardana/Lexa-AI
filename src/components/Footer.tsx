@@ -1,0 +1,103 @@
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-gray-900 text-white mt-20">
+      <div className="container-custom py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {/* About */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">About Project</h3>
+            <p className="text-gray-400 text-sm">
+              AI-Assisted Criminal Investigation Platform - A research
+              initiative focused on leveraging machine learning and NLP for
+              modern investigative processes.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/" className="text-gray-400 hover:text-white">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/domain" className="text-gray-400 hover:text-white">
+                  Domain
+                </a>
+              </li>
+              <li>
+                <a href="/documents" className="text-gray-400 hover:text-white">
+                  Documents
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-gray-400 hover:text-white">
+                  Team
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Resources</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="/presentations"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Presentations
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/milestones"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Milestones
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-gray-400 hover:text-white">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Contact</h3>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>Email: [Your Email]</li>
+              <li>Phone: [Your Phone]</li>
+              <li>Address: [Your Address]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              &copy; {currentYear} AI-Assisted Criminal Investigation Platform.
+              All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" className="text-gray-400 hover:text-white text-sm">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white text-sm">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

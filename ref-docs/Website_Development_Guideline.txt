@@ -1,0 +1,105 @@
+Research Project Website Development Guideline
+==============================================
+
+Objective
+---------
+Develop a Research Project Website for academic display — presenting project information, documents, milestones, and team details. The website should be simple, fast-loading, and visually consistent.
+
+General Requirements
+--------------------
+- Static or lightweight dynamic website.
+- Responsive layout — optimized for desktop and mobile.
+- Clean and consistent design across all pages.
+- Fast load times (optimize all images & assets).
+
+Site Structure (Main Navigation Tabs)
+-------------------------------------
+Home
+Domain
+Milestones
+Documents
+Presentations
+About Us
+Contact Us
+
+1. Home Page
+------------
+- Provide a concise abstract/introduction of the project.
+- Use minimal graphics, optimized for web.
+- Maintain visual consistency and simple navigation.
+- Optional: include a project logo or banner image.
+
+2. Domain
+---------
+- Present your literature survey and background research.
+- Include sections:
+  - Literature Survey
+  - Research Gap
+  - Research Problem
+  - Objectives
+  - Methodology
+  - Technologies Used
+
+3. Milestones
+-------------
+- Display project assessments with names, dates, and marks.
+- Use timeline view.
+- Example entries:
+  - Project Proposal
+  - Progress Presentation 1
+  - Progress Presentation 2
+  - Final Assessment
+  - Viva
+
+4. Documents
+------------
+- Provide download/view links to project documents:
+  - Project Charter
+  - Proposal
+  - Checklists
+  - Final Reports
+
+5. Presentations (Slides)
+-------------------------
+- Link to presentation slides:
+  - Proposal Presentation
+  - Progress 1 & 2
+  - Final Presentation
+
+6. About Us
+-----------
+- List team members with:
+  - Names
+  - Roles
+  - Emails
+  - Photos
+  - Achievements (if any)
+
+7. Contact Us
+-------------
+- General contact information:
+  - Email, Telephone, Address
+  - contact form
+
+Assets and File Management
+--------------------------
+- Organize files in a clear folder hierarchy
+- Test locally before deployment.
+- Optimize all media for web (reduce file size and resolution).
+
+Design Guidelines
+-----------------
+- Consistent header/footer across all pages.
+- Clear navigation bar with highlighting of the active tab.
+- Use legible fonts and simple color palette.
+
+Tech Stack
+------------------------
+- Frontend: NextJs
+- Styling: Tailwind
+
+Deliverables
+------------
+- Functional website with all required sections.
+- All content, images, and documents organized in local site folder.
+- Tested for navigation, responsiveness, and link accuracy.

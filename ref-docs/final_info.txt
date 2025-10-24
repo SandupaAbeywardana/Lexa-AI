@@ -1,0 +1,67 @@
+LITERATURE SURVEY  
+Artificial intelligence has rapidly evolved as a cornerstone of modern criminal investigations, integrating NLP, multimodal analytics, and predictive modeling to improve speed, accuracy, and transparency across case work. Early efforts in law-enforcement AI moved from expert/rule-based systems toward data-driven machine learning that can surface hidden patterns and support proactive decision-making. Studies show that predictive policing and incident-link analysis can prioritize resources and forecast risk, while also revealing challenges around bias, explainability, and governance—underscoring the need for human-in-the-loop controls and accountable model design [1].
+
+A parallel line of work focuses on multimodal behavioral analysis during interviews and interrogations. Research on facial expression recognition (FER) and speech emotion recognition (SER) demonstrates that combining modalities yields more reliable indicators of stress and credibility than any single stream alone. CNN and CNN-BiLSTM architectures with attention have achieved solid accuracy on benchmark datasets (e.g., FER-2013, RAVDESS). However, real-world robustness varies with language, accent, noise, lighting, and sensor placement, highlighting the need for quality gating, temporal smoothing, and graceful degradation when one modality underperforms [2].
+
+Another key strand addresses legal-text automation. Advances in OCR and domain-specific NLP now enable conversion of multilingual police reports and court documents into structured case data. High-speed OCR combined with prompt-guided entity extraction (names, dates, relationships, evidence types) and schema validation can standardize noisy archives and feed downstream analytics. Comparative evaluations in legal/forensic settings report strong accuracy and latency improvements, yet performance still drops on poorly scanned or mixed-language inputs—motivating pipeline designs that include deduplication, translation consistency, and confidence-aware review workflows [3].
+
+Gap & Opportunity. Existing literature often optimizes one facet—prediction, behavior analysis, or document intelligence—in isolation. What’s missing is an integrated, end-to-end platform that:  
+1. digitizes and structures multilingual legal evidence at scale,  
+2. adapts questioning in real time with relevance scoring and investigator override,  
+3. fuses FER/SER into a stable, quality-aware Stress Index, and  
+4. correlates incidents using both structured features and semantic similarity—while exposing explanations, scores, and audit trails at every step.
+
+Lexa AI targets this gap with a four-phase architecture (Automated Data Collection → Dynamic Questioning → Multimodal Behavioral & Physiological Analysis → Incident Correlation & Pattern Identification) designed for real-time use, transparent reasoning, and human oversight—bridging research advances with operational constraints in modern investigations.
+
+References  
+[1] Choudhary, R. AI in Criminal Investigations: From Automation to Predictive Analytics. Forensic Science Int., 2022.  
+[2] Verma, K. Multimodal Stress Detection Using FER and SER. IEEE Trans. Biomed. Eng., 2021; plus CNN-BiLSTM SER findings on RAVDESS discussed in the Lexa AI review.  
+[3] Gonzalez, M. OCR in Legal and Forensic Domains: Pitfalls and Advances. IEEE Access, 2021; with legal NLP and schema-driven extraction summarized in the Lexa AI methodology.
+
+RESEARCH GAP  
+Following areas represent the key research gaps identified in most recent studies on AI-assisted criminal investigations:
+
+________________________________________  
+Automated Data Collection and Structuring  
+Most existing systems in law enforcement rely on manual entry or limited OCR tools for processing police reports and court documents. Current literature lacks robust multilingual document-processing pipelines capable of handling unstructured, noisy legal text in Sinhala and English while ensuring data integrity and schema validation. There is a clear need for automated, high-accuracy data extraction frameworks that convert scanned legal documents into machine-readable structured data for downstream analysis.
+
+________________________________________  
+Dynamic Question Generation and Response Analysis  
+Research into adaptive AI-driven interrogation support remains scarce. Prior systems use static question banks that fail to adjust based on context or prior responses. There is a gap in real-time question-generation models using reinforcement learning that can analyze responses for semantic similarity and relevance, enabling investigators to refine questioning dynamically while maintaining human oversight.
+
+________________________________________  
+Multimodal Behavioral and Physiological Analysis  
+Although facial-expression and speech-emotion recognition have shown promise in controlled experiments, integration of multiple synchronized behavioral and physiological stress indicators for field-grade multimodal analysis is still limited. Existing studies seldom fuse multiple signal types with synchronization and quality control. This highlights a gap for systems capable of real-time multimodal fusion that can quantify stress and emotional states objectively during interrogations.
+
+________________________________________  
+Incident Correlation and Pattern Identification  
+Current AI models for crime prediction typically operate on historical crime datasets without linking narrative testimonies or cross-case context. There is limited research on combining structured (demographics, crime type) and unstructured (testimonies, evidence narratives) data to uncover hidden relationships among cases. This leaves a need for semantic-similarity-based correlation systems that can identify related incidents and predict potential suspects with explainable reasoning.
+
+PROPOSED PROBLEM  
+Criminal investigations in Sri Lanka remain largely manual, with fragmented records, subjective judgments, and limited data integration. Investigators struggle to process unstructured, multilingual reports and correlate related cases, leading to delays and inconsistencies. Traditional interrogation methods also lack objective tools to assess stress or credibility, increasing bias risks.  
+There is a critical need for an AI-assisted system that automates document analysis, generates adaptive questions, interprets behavioral cues, and identifies cross-case links. Such a solution can make investigations faster, more transparent, and evidence-driven.
+
+PROPOSED SOLUTION  
+The proposed solution is to develop a web-based AI-assisted criminal investigation platform that integrates automated data extraction, dynamic questioning, multimodal behavioral analysis, and predictive case correlation. The system will process unstructured legal documents, analyze interrogation responses, and assess stress or credibility through facial, vocal, and physiological cues.  
+By combining machine learning, NLP, and multimodal analytics, the platform will provide investigators with real-time insights, cross-case correlations, and explainable predictions — enabling faster, more accurate, and transparent decision-making across the entire investigative process.
+
+RESEARCH OBJECTIVES  
+
+AUTOMATED DATA COLLECTION AND EXTRACTION  
+The first objective is to develop a system capable of extracting and structuring information from unstructured legal documents such as police reports and court files written in Sinhala and English. Using advanced Optical Character Recognition (OCR) and Natural Language Processing (NLP), the system will convert scanned text into structured JSON data, ensuring consistency and accessibility for further analysis.
+
+________________________________________  
+DYNAMIC QUESTION GENERATION AND RESPONSE ANALYSIS  
+The second objective is to create an adaptive interrogation support module that generates context-aware questions using large language models and reinforcement learning. The system will analyze responses based on semantic similarity and assign relevance scores, allowing investigators to refine questioning strategies in real time while maintaining human oversight.
+
+________________________________________  
+MULTIMODAL BEHAVIORAL AND PHYSIOLOGICAL ANALYSIS  
+The third objective focuses on integrating facial, vocal, and other physiological signal analysis to assess emotional state and credibility during interrogations. By combining Facial Expression Recognition (FER) and Speech Emotion Recognition (SER), the system will produce a unified Stress Index, providing investigators with objective behavioral insights.
+
+________________________________________  
+INCIDENT CORRELATION AND PATTERN IDENTIFICATION  
+The fourth objective is to implement machine learning models that can correlate new incidents with historical cases using both structured attributes (age, gender, type of crime) and unstructured narratives. Through semantic similarity analysis and Random Forest classification, the system will identify related cases, potential suspects, and risk levels to support informed decision-making.
+
+________________________________________  
+VISUALIZATION AND WEB APPLICATION  
+The final objective is to design a web-based dashboard that consolidates all system outputs — structured data, behavioral analytics, question logs, and case correlations — into a unified interface. The platform will visualize results in real time, enabling investigators to monitor ongoing interrogations, review AI insights, and make data-driven decisions efficiently and transparently.

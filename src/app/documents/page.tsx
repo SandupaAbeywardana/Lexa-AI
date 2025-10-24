@@ -67,30 +67,6 @@ export default function Documents() {
           )}
         </div>
       </section>
-
-      {/* Document Statistics */}
-      <section className="py-16 bg-gray-100">
-        <div className="container-custom">
-          <h2 className="section-title text-center">Document Summary</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { label: "Total Documents", value: projectData.documents.length },
-              { label: "Categories", value: categories.length },
-              {
-                label: "Ready to Download",
-                value: projectData.documents.length,
-              },
-            ].map((stat, i) => (
-              <div key={i} className="text-center card p-6">
-                <div className="text-4xl font-bold text-primary mb-2">
-                  {stat.value}
-                </div>
-                <p className="text-gray-700 font-semibold">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

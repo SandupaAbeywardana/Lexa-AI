@@ -1,3 +1,5 @@
+import { projectData } from "@/data/projectData";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -78,9 +80,27 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Email: [Your Email]</li>
-              <li>Phone: [Your Phone]</li>
-              <li>Address: [Your Address]</li>
+              <li>
+                Email:&nbsp;
+                <a
+                  href={`mailto:${projectData.contact.email}`}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {projectData.contact.email}
+                </a>
+              </li>
+              <li>
+                Phone:&nbsp;
+                <a
+                  href={`tel:${projectData.contact.phone}`}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {projectData.contact.phone}
+                </a>
+              </li>
+              <li className="text-gray-400">
+                Address: {projectData.contact.address}
+              </li>
             </ul>
           </div>
         </div>
@@ -99,14 +119,14 @@ export default function Footer() {
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
-                href="#"
+                href="/privacy"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
                 Privacy Policy
               </a>
               <span className="text-gray-600">•</span>
               <a
-                href="#"
+                href="/terms"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
                 Terms of Service

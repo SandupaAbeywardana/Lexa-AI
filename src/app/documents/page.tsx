@@ -47,7 +47,7 @@ export default function Documents() {
                                 href={fileItem.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center text-sm text-primary hover:text-secondary font-semibold transition-colors block mx-6"
+                                className="inline-flex items-center text-sm text-primary hover:text-secondary font-semibold transition-colors block mr-12"
                               >
                                 <span>{fileItem.name}</span>
                                 <span className="ml-2">↓</span>

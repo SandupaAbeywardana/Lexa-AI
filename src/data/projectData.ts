@@ -20,7 +20,7 @@ export const projectData = {
       id: 2,
       name: "Kaveesha Karunarathna",
       role: "Group Leader",
-      image: "/images/members/1-kaveesha.jpg",
+      image: "/images/members/kaveesha.jpg",
       email: "kaveesha5karunarathna@gmail.com",
       github: "https://github.com/KaveeshaKaru",
       linkedin: "https://www.linkedin.com/in/kaveesha-karunarathna",
@@ -134,6 +134,100 @@ export const projectData = {
       description: "System architecture and technical details",
       file: "/documents/tech-docs.pdf",
       category: "Documentation",
+    },
+    {
+      id: 5,
+      title: "Group Report",
+      description: "Group Final Report",
+      file: [
+        {
+          name: "Report",
+          url: "/files/documents/final-report/Group - Final Report.pdf",
+        },
+        {
+          name: "Turnitin Report",
+          url: "/files/documents/final-report/turnitin-reports/Group - Turnitin.pdf",
+        },
+      ],
+      category: "Final Reports",
+    },
+    {
+      id: 6,
+      title: "IT21294334",
+      description: "Final Report - IT21294334",
+      file: [
+        {
+          name: "Report",
+          url: "/files/documents/final-report/IT21294334 - Final Report.pdf",
+        },
+        {
+          name: "Turnitin Report",
+          url: "/files/documents/final-report/turnitin-reports/IT21294334 - Turnitin.pdf",
+        },
+      ],
+      category: "Final Reports",
+    },
+    {
+      id: 7,
+      title: "IT21359606",
+      description: "Final Report - IT21359606",
+      file: [
+        {
+          name: "Report",
+          url: "/files/documents/final-report/IT21359606 - Final Report.pdf",
+        },
+        {
+          name: "Turnitin Report",
+          url: "/files/documents/final-report/turnitin-reports/IT21359606 - Turnitin.pdf",
+        },
+      ],
+      category: "Final Reports",
+    },
+    {
+      id: 8,
+      title: "IT21813252",
+      description: "Final Report - IT21813252",
+      file: [
+        {
+          name: "Report",
+          url: "/files/documents/final-report/IT21813252 - Final Report.pdf",
+        },
+        {
+          name: "Turnitin Report",
+          url: "/files/documents/final-report/turnitin-reports/IT21813252 - Turnitin.pdf",
+        },
+      ],
+      category: "Final Reports",
+    },
+    {
+      id: 9,
+      title: "IT21822230",
+      description: "Final Report - IT21822230",
+      file: [
+        {
+          name: "Report",
+          url: "/files/documents/final-report/IT21822230 - Final Report.pdf",
+        },
+        {
+          name: "Turnitin Report",
+          url: "/files/documents/final-report/turnitin-reports/IT21822230 - Turnitin.pdf",
+        },
+      ],
+      category: "Final Reports",
+    },
+    {
+      id: 10,
+      title: "Checklist 1",
+      description: "Checklist 1",
+      file: "/files/documents/checklist/checklist-1.xlsx",
+      category: "Checklist Documents",
+    },
+    {
+      id: 11,
+      title: "Checklist 2",
+      description: "Checklist 2",
+      file: "/files/documents/checklist/checklist-2.md",
+      category: "Checklist Documents",
     },
   ],
 

@@ -21,7 +21,11 @@ const cardVariants = {
   }),
 };
 
-export const AnimatedCard = ({ children, className, index }: AnimatedCardProps) => {
+export const AnimatedCard = ({
+  children,
+  className,
+  index,
+}: AnimatedCardProps) => {
   return (
     <motion.div
       className={`card p-8 ${className}`}

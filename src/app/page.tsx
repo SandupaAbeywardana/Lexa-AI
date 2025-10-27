@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { projectData } from "@/data/projectData";
+import { GalleryCarousel } from "@/components/GalleryCarousel";
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -36,7 +37,7 @@ export default function Home() {
             <div className="flex justify-center">
               <img
                 src="/images/lexaRobo.png"
-                alt="Hero Image"
+                alt="Lexa AI Robot Mascot"
                 className="w-full max-w-md"
               />
             </div>
@@ -71,8 +72,8 @@ export default function Home() {
                 title: "Incident Correlation",
                 description: "Pattern identification and case linking",
               },
-            ].map((feature, index) => (
-              <div key={index} className="card p-6">
+            ].map((feature) => (
+              <div key={feature.title} className="card p-6">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -193,8 +194,8 @@ export default function Home() {
             <h3 className="text-2xl font-bold mb-8 text-center">
               Platform Views
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
+            <GalleryCarousel
+              photos={[
                 {
                   src: "/images/gallery/screenshot (1).png",
                   title: "Dashboard Overview",
@@ -249,38 +250,38 @@ export default function Home() {
                   description:
                     "Form interface for initiating new investigations",
                 },
-              ].map((photo) => (
-                <button
-                  key={photo.src}
-                  className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer w-full text-left border-0 p-0 bg-transparent hover:bg-transparent"
-                  onClick={() => setSelectedImage(photo.src)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      setSelectedImage(photo.src);
-                    }
-                  }}
-                  aria-label={`View ${photo.title}`}
-                >
-                  {/* Image Container */}
-                  <div className="relative w-full h-64 overflow-hidden bg-gray-200">
-                    <img
-                      src={photo.src}
-                      alt={photo.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
+              ]}
+              onImageSelect={setSelectedImage}
+            />
+          </div>
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <h4 className="text-white font-bold text-lg mb-2">
-                      {photo.title}
-                    </h4>
-                    <p className="text-gray-200 text-sm">{photo.description}</p>
-                    <p className="text-white text-xs mt-2">Click to enlarge</p>
-                  </div>
-                </button>
-              ))}
-            </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-8 mt-12 text-center">
+              Project Chronicles
+            </h3>
+            <GalleryCarousel
+              photos={[
+                {
+                  src: "/images/gallery-2/image (1).jpg",
+                },
+                {
+                  src: "/images/gallery-2/image (2).jpg",
+                },
+                {
+                  src: "/images/gallery-2/image (3).jpg",
+                },
+                {
+                  src: "/images/gallery-2/image (4).jpg",
+                },
+                {
+                  src: "/images/gallery-2/image (5).jpg",
+                },
+                {
+                  src: "/images/gallery-2/image (6).jpg",
+                },
+              ]}
+              onImageSelect={setSelectedImage}
+            />
           </div>
         </div>
       </section>

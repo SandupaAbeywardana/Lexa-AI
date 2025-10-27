@@ -153,11 +153,11 @@ export const projectData = {
       file: [
         {
           name: "Report",
-          url: "/files/documents/final-report/Group - Final Report.pdf",
+          url: "/files/documents/final-reports/Group - Final Report.pdf",
         },
         {
           name: "Turnitin Report",
-          url: "/files/documents/final-report/turnitin-reports/Group - Turnitin.pdf",
+          url: "/files/documents/final-reports/turnitin-reports/Group - Turnitin.pdf",
         },
       ],
       category: "Final Reports",
@@ -169,11 +169,11 @@ export const projectData = {
       file: [
         {
           name: "Report",
-          url: "/files/documents/final-report/IT21294334 - Final Report.pdf",
+          url: "/files/documents/final-reports/IT21294334 - Final Report.pdf",
         },
         {
           name: "Turnitin Report",
-          url: "/files/documents/final-report/turnitin-reports/IT21294334 - Turnitin.pdf",
+          url: "/files/documents/final-reports/turnitin-reports/IT21294334 - Turnitin.pdf",
         },
       ],
       category: "Final Reports",
@@ -185,11 +185,11 @@ export const projectData = {
       file: [
         {
           name: "Report",
-          url: "/files/documents/final-report/IT21359606 - Final Report.pdf",
+          url: "/files/documents/final-reports/IT21359606 - Final Report.pdf",
         },
         {
           name: "Turnitin Report",
-          url: "/files/documents/final-report/turnitin-reports/IT21359606 - Turnitin.pdf",
+          url: "/files/documents/final-reports/turnitin-reports/IT21359606 - Turnitin.pdf",
         },
       ],
       category: "Final Reports",
@@ -201,11 +201,11 @@ export const projectData = {
       file: [
         {
           name: "Report",
-          url: "/files/documents/final-report/IT21813252 - Final Report.pdf",
+          url: "/files/documents/final-reports/IT21813252 - Final Report.pdf",
         },
         {
           name: "Turnitin Report",
-          url: "/files/documents/final-report/turnitin-reports/IT21813252 - Turnitin.pdf",
+          url: "/files/documents/final-reports/turnitin-reports/IT21813252 - Turnitin.pdf",
         },
       ],
       category: "Final Reports",
@@ -217,11 +217,11 @@ export const projectData = {
       file: [
         {
           name: "Report",
-          url: "/files/documents/final-report/IT21822230 - Final Report.pdf",
+          url: "/files/documents/final-reports/IT21822230 - Final Report.pdf",
         },
         {
           name: "Turnitin Report",
-          url: "/files/documents/final-report/turnitin-reports/IT21822230 - Turnitin.pdf",
+          url: "/files/documents/final-reports/turnitin-reports/IT21822230 - Turnitin.pdf",
         },
       ],
       category: "Final Reports",

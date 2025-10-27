@@ -94,7 +94,9 @@ export default function Milestones() {
                       {milestone.marks && (
                         <div className="pt-3 border-t border-gray-200">
                           <p className="text-sm">
-                            <span className="font-semibold">Marks:</span>{" "}
+                            <span className="font-semibold">
+                              Allocated Marks:
+                            </span>{" "}
                             {milestone.marks}
                           </p>
                         </div>

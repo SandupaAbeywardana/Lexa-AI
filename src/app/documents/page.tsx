@@ -38,18 +38,33 @@ export default function Documents() {
                         </p>
                       </div>
                       <div className="mt-auto pt-4 border-t border-gray-200">
-                        <a
-                          href={doc.file}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-primary hover:text-secondary font-semibold transition-colors"
-                        >
-                          <span>Download PDF</span>
-                          <span className="ml-2">↓</span>
-                        </a>
-                        <p className="text-xs text-gray-500 mt-2">
-                          [PDF - Placeholder]
-                        </p>
+                        {/* Check if file is an array */}
+                        {Array.isArray(doc.file) ? (
+                          <div className="space-y-2">
+                            {doc.file.map((fileItem) => (
+                              <a
+                                key={fileItem.url}
+                                href={fileItem.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center text-sm text-primary hover:text-secondary font-semibold transition-colors block mx-6"
+                              >
+                                <span>{fileItem.name}</span>
+                                <span className="ml-2">↓</span>
+                              </a>
+                            ))}
+                          </div>
+                        ) : (
+                          <a
+                            href={doc.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-primary hover:text-secondary font-semibold transition-colors"
+                          >
+                            <span>Download PDF</span>
+                            <span className="ml-2">↓</span>
+                          </a>
+                        )}
                       </div>
                     </div>
                   ))}

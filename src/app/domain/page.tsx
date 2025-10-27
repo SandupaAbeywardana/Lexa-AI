@@ -1,3 +1,8 @@
+'use client';
+import { motion } from "framer-motion";
+import TechnologyCard from "@/components/TechnologyCard";
+import { technologies } from "@/data/technologies";
+
 export default function Domain() {
   return (
     <div>
@@ -369,51 +374,23 @@ export default function Domain() {
           </div>
 
           {/* Technologies Used */}
-          <div>
-            <h2 className="section-title">Technologies Used</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  category: "Frontend",
-                  techs: ["Next.js", "Tailwind CSS"],
-                },
-                {
-                  category: "Backend",
-                  techs: ["Python", "FastAPI", "Node.js"],
-                },
-                {
-                  category: "AI/ML",
-                  techs: ["TensorFlow", "PyTorch", "Scikit-learn"],
-                },
-                {
-                  category: "NLP",
-                  techs: ["Gemini", "OpenAI", "BERT"],
-                },
-                {
-                  category: "Computer Vision",
-                  techs: ["OpenCV", "CNNs"],
-                },
-                {
-                  category: "Database",
-                  techs: ["MongoDB"],
-                },
-              ].map((tech) => (
-                <div key={tech.category} className="card p-6">
-                  <h3 className="font-bold text-lg mb-4 text-primary">
-                    {tech.category}
-                  </h3>
-                  <ul className="space-y-2">
-                    {tech.techs.map((item) => (
-                      <li
-                        key={item}
-                        className="text-gray-700 flex items-center"
-                      >
-                        <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <div className="py-12">
+            <motion.h2 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="section-title text-center mb-12"
+            >
+              Technologies Used
+            </motion.h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {technologies.map((tech, index) => (
+                <TechnologyCard
+                  key={tech.category}
+                  category={tech.category}
+                  techs={tech.techs}
+                  index={index}
+                />
               ))}
             </div>
           </div>

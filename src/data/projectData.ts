@@ -20,7 +20,7 @@ export const projectData = {
       id: 2,
       name: "Kaveesha Karunarathna",
       role: "Group Leader",
-      image: "/images/members/kaveesha.jpg",
+      image: "/images/members/1-kaveesha.jpg",
       email: "kaveesha5karunarathna@gmail.com",
       github: "https://github.com/KaveeshaKaru",
       linkedin: "https://www.linkedin.com/in/kaveesha-karunarathna",
@@ -104,47 +104,36 @@ export const projectData = {
       id: 1,
       title: "Project Charter",
       description: "Project charter and scope definition",
-      file: "/files/documents/project-charter.pdf",
+      file: "/documents/project-charter.pdf",
       category: "Planning",
     },
     {
       id: 2,
       title: "Project Proposal",
       description: "Detailed project proposal document",
-      file: [
-        {
-          name: "IT21294334",
-          url: "/files/documents/project-proposal/IT21294334_Project Proporsal Report.pdf",
-        },
-        {
-          name: "IT21359606",
-          url: "/files/documents/project-proposal/IT21359606_Project Proporsal Report.pdf",
-        },
-        {
-          name: "IT21813252",
-          url: "/files/documents/project-proposal/IT21813252_Project Proposal Report.pdf",
-        },
-        {
-          name: "IT21822230",
-          url: "/files/documents/project-proposal/IT21822230_Project Proposal Report.pdf",
-        },
-      ],
-      category: "Planning",
+      file: "/documents/proposal.pdf",
+      category: "Documentation",
     },
     {
       id: 3,
-      title: "Topic Assessment Form",
-      description: "Topic assessment form submitted for approval",
-      file: "/files/documents/topic-assessment-form.pdf",
-      category: "Planning",
+      title: "Development Checklist",
+      description: "Development progress checklist",
+      file: "/documents/checklist.pdf",
+      category: "Progress",
     },
     {
       id: 4,
-      title: "Research Paper",
-      description:
-        "AI-Assisted Criminal Investigations: Enhancing Testimony Analysis and Case Correlation",
-      file: "/files/documents/research-paper.pdf",
-      category: "Research",
+      title: "Final Report",
+      description: "Final project report and findings",
+      file: "/documents/final-report.pdf",
+      category: "Reports",
+    },
+    {
+      id: 5,
+      title: "Technical Documentation",
+      description: "System architecture and technical details",
+      file: "/documents/tech-docs.pdf",
+      category: "Documentation",
     },
   ],
 
@@ -179,8 +168,8 @@ export const projectData = {
   // Contact information - Replace with actual details
   contact: {
     email: "help@lexa.ai",
-    phone: "+44 1234 567890",
-    address: "123 Investigation Ave, London, UK",
-    institution: "Lexa AI Research Institute",
+    phone: "+94 11 754 4801",
+    address: "New Kandy Road, Malabe, Sri Lanka",
+    institution: "Sri Lanka Institute of Information Technology",
   },
 };

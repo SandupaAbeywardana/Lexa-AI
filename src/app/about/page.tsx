@@ -1,5 +1,7 @@
+"use client";
 import { projectData } from "@/data/projectData";
 import { Icon } from "@iconify/react";
+import { AnimatedCard } from "@/components/AnimatedCard";
 
 export default function About() {
   return (
@@ -84,32 +86,49 @@ export default function About() {
       </section>
 
       {/* Project Overview */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
-          <h2 className="section-title">Project Overview</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="card p-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Project Overview</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our project is driven by a clear mission, a compelling vision, and
+              well-defined goals to revolutionize criminal investigations.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <AnimatedCard index={0} className="text-center">
+              <Icon
+                icon="heroicons:rocket-launch"
+                className="text-4xl text-primary mx-auto mb-4"
+              />
               <h3 className="text-2xl font-bold mb-4">Mission</h3>
               <p className="text-gray-700">
                 To develop an innovative AI-assisted platform that modernizes
-                criminal investigations through automated data processing,
-                intelligent questioning support, behavioral analysis, and
-                cross-case pattern identification.
+                criminal investigations through automated data processing and
+                intelligent analysis.
               </p>
-            </div>
+            </AnimatedCard>
 
-            <div className="card p-8">
+            <AnimatedCard index={1} className="text-center">
+              <Icon
+                icon="heroicons:eye"
+                className="text-4xl text-primary mx-auto mb-4"
+              />
               <h3 className="text-2xl font-bold mb-4">Vision</h3>
               <p className="text-gray-700">
-                A future where criminal investigations are faster, more
-                transparent, and evidence-driven, with AI supporting human
-                investigators while maintaining human oversight and control.
+                A future where investigations are faster, more transparent, and
+                evidence-driven, with AI augmenting human expertise while
+                upholding ethical standards.
               </p>
-            </div>
+            </AnimatedCard>
 
-            <div className="card p-8">
+            <AnimatedCard index={2} className="text-center">
+              <Icon
+                icon="heroicons:check-badge"
+                className="text-4xl text-primary mx-auto mb-4"
+              />
               <h3 className="text-2xl font-bold mb-4">Goals</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-700 text-left">
                 <li className="flex items-start">
                   <span className="text-primary mr-3">✓</span>
                   <span>Improve investigation efficiency by 40%+</span>
@@ -123,16 +142,20 @@ export default function About() {
                   <span>Increase cross-case correlations</span>
                 </li>
               </ul>
-            </div>
+            </AnimatedCard>
 
-            <div className="card p-8">
+            <AnimatedCard index={3} className="text-center">
+              <Icon
+                icon="heroicons:globe-alt"
+                className="text-4xl text-primary mx-auto mb-4"
+              />
               <h3 className="text-2xl font-bold mb-4">Impact</h3>
               <p className="text-gray-700">
-                This research aims to set new standards for AI-assisted
-                investigations in Sri Lanka and contribute to global best
-                practices in law enforcement technology.
+                To set new standards for AI-assisted investigations in Sri Lanka
+                and contribute to global best practices in law enforcement
+                technology.
               </p>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>

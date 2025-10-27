@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import { projectData } from "@/data/projectData";
 
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <div>
       {/* Hero Section */}
@@ -153,6 +157,192 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Gallery & Demo Video Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="section-title text-center mb-4">Gallery</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Explore our platform in action with demo videos and screenshots
+            showcasing the key features and user interface.
+          </p>
+
+          {/* Video Player */}
+          <div className="mb-12">
+            <div className="bg-black rounded-lg overflow-hidden shadow-xl">
+              <video
+                width="100%"
+                height="auto"
+                controls
+                className="w-full aspect-video"
+                poster="/images/gallery/photo-1.jpg"
+              >
+                <source src="/video/demo.mp4" type="video/mp4" />
+                <track kind="captions" srcLang="en" label="English" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p className="text-center text-gray-600 mt-4 text-sm">
+              Watch a comprehensive demo of the AI-Assisted Criminal
+              Investigation Platform
+            </p>
+          </div>
+
+          {/* Photo Gallery */}
+          <div>
+            <h3 className="text-2xl font-bold mb-8 text-center">
+              Platform Views
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  src: "/images/gallery/screenshot (1).png",
+                  title: "Dashboard Overview",
+                  description:
+                    "Main investigative dashboard with real-time analytics",
+                },
+                {
+                  src: "/images/gallery/screenshot (2).png",
+                  title: "Interrogation Session Interface",
+                  description:
+                    "AI-assisted interface for conducting interviews",
+                },
+                {
+                  src: "/images/gallery/screenshot (3).png",
+                  title: "Investigation Analysis Interface",
+                  description:
+                    "Analytics interface for case and session overviews",
+                },
+                {
+                  src: "/images/gallery/screenshot (4).png",
+                  title: "Document Processing Interface",
+                  description:
+                    "Document analysis and information extraction tool",
+                },
+                {
+                  src: "/images/gallery/screenshot (5).png",
+                  title: "Person Registry",
+                  description:
+                    "Person database management with AI-driven insights",
+                },
+                {
+                  src: "/images/gallery/screenshot (6).png",
+                  title: "AI-Driven Predictions",
+                  description:
+                    "Predictive analytics for case outcomes and action recommendations",
+                },
+                {
+                  src: "/images/gallery/screenshot (7).png",
+                  title: "Trend Analysis Interface",
+                  description:
+                    "Visualizing crime trends and patterns over time",
+                },
+                {
+                  src: "/images/gallery/screenshot (8).png",
+                  title: "Criminal Analytics Interface",
+                  description:
+                    "In-depth analysis tools for criminal behavior insights",
+                },
+                {
+                  src: "/images/gallery/screenshot (9).png",
+                  title: "Investigation Creation Form",
+                  description:
+                    "Form interface for initiating new investigations",
+                },
+              ].map((photo) => (
+                <button
+                  key={photo.src}
+                  className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer w-full text-left border-0 p-0 bg-transparent hover:bg-transparent"
+                  onClick={() => setSelectedImage(photo.src)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setSelectedImage(photo.src);
+                    }
+                  }}
+                  aria-label={`View ${photo.title}`}
+                >
+                  {/* Image Container */}
+                  <div className="relative w-full h-64 overflow-hidden bg-gray-200">
+                    <img
+                      src={photo.src}
+                      alt={photo.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 className="text-white font-bold text-lg mb-2">
+                      {photo.title}
+                    </h4>
+                    <p className="text-gray-200 text-sm">{photo.description}</p>
+                    <p className="text-white text-xs mt-2">Click to enlarge</p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fullscreen Image Modal */}
+      {selectedImage && (
+        <dialog
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 w-full h-full"
+          open
+        >
+          <div className="relative max-w-5xl max-h-screen w-full h-full flex items-center justify-center">
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  setSelectedImage(null);
+                }
+              }}
+              className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full p-2 transition-colors"
+              aria-label="Close modal"
+            >
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            {/* Image */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              onKeyDown={(e) => {
+                if (e.key === "Escape" || e.key === "Enter") {
+                  setSelectedImage(null);
+                }
+              }}
+              className="bg-transparent border-0 p-0 cursor-pointer hover:opacity-90 transition-opacity"
+              aria-label="Click to close"
+            >
+              <img
+                src={selectedImage}
+                alt="Fullscreen view"
+                className="max-w-full max-h-full object-contain"
+              />
+            </button>
+
+            {/* Close on ESC hint */}
+            <p className="absolute bottom-4 left-4 text-white/60 text-sm">
+              Press ESC or click to close
+            </p>
+          </div>
+        </dialog>
+      )}
 
       {/* Call to Action */}
       <section className="py-20 bg-white">

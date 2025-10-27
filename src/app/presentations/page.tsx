@@ -24,7 +24,11 @@ export default function Presentations() {
               >
                 {/* Thumbnail */}
                 <div className="bg-gradient-primary h-48 flex items-center justify-center">
-                  <span className="text-6xl">🎯</span>
+                  <img
+                    src="/images/pptx-preview.png"
+                    alt="Presentation Thumbnail"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Content */}
@@ -36,13 +40,6 @@ export default function Presentations() {
                     {presentation.description}
                   </p>
 
-                  <div className="mb-4 pb-4 border-b border-gray-200">
-                    <p className="text-sm text-gray-500">
-                      <span className="font-semibold">Date:</span>{" "}
-                      {presentation.date}
-                    </p>
-                  </div>
-
                   <a
                     href={presentation.file}
                     target="_blank"
@@ -52,9 +49,6 @@ export default function Presentations() {
                     <span>View Presentation</span>
                     <span className="ml-2">→</span>
                   </a>
-                  <p className="text-xs text-gray-500 mt-2">
-                    [PDF - Placeholder]
-                  </p>
                 </div>
               </div>
             ))}

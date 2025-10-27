@@ -102,7 +102,10 @@ export default function Contact() {
             <motion.div variants={itemVariants} className="space-y-8">
               {/* Email */}
               <motion.div
-                whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
+                whileHover={{
+                  y: -5,
+                  boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                }}
                 className="card p-6 flex items-start gap-4 transition-all duration-300"
               >
                 <Icon
@@ -122,7 +125,10 @@ export default function Contact() {
 
               {/* Phone */}
               <motion.div
-                whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
+                whileHover={{
+                  y: -5,
+                  boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                }}
                 className="card p-6 flex items-start gap-4 transition-all duration-300"
               >
                 <Icon
@@ -142,7 +148,10 @@ export default function Contact() {
 
               {/* Address */}
               <motion.div
-                whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
+                whileHover={{
+                  y: -5,
+                  boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                }}
                 className="card p-6 flex items-start gap-4 transition-all duration-300"
               >
                 <Icon
@@ -326,10 +335,7 @@ export default function Contact() {
                   >
                     {submitStatus === "loading" ? (
                       <>
-                        <Icon
-                          icon="lucide:loader"
-                          className="animate-spin"
-                        />
+                        <Icon icon="lucide:loader" className="animate-spin" />
                         Sending...
                       </>
                     ) : (

@@ -121,19 +121,19 @@ export const projectData = {
       file: [
         {
           name: "IT21294334",
-          url: "/files/documents/project-proposal/IT21294334_Project Proporsal Report.pdf",
+          url: "/files/documents/project-proposal/IT21294334_Project Proposal Report.pdf",
         },
         {
           name: "IT21359606",
-          url: "/files/documents/project-proposal/IT21359606_Project Proporsal Report.pdf",
+          url: "/files/documents/project-proposal/IT21359606_Project Proposal Report.pdf",
         },
         {
           name: "IT21813252",
-          url: "/files/documents/project-proposal/IT21813252_Project Proporsal Report.pdf",
+          url: "/files/documents/project-proposal/IT21813252_Project Proposal Report.pdf",
         },
         {
           name: "IT21822230",
-          url: "/files/documents/project-proposal/IT21822230_Project Proporsal Report.pdf",
+          url: "/files/documents/project-proposal/IT21822230_Project Proposal Report.pdf",
         },
       ],
       category: "Planning Documentation",

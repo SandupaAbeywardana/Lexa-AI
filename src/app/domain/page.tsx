@@ -199,6 +199,39 @@ export default function Domain() {
                     Pitfalls and Advances," IEEE Access, vol. vol. 9, p. pp.
                     145320–145333, 2021.
                   </p>
+                  <p id="ref-9">
+                    [9] P. Brown, Evaluation of Large Language Models for Legal
+                    Tasks, Proc. NeurIPS Workshop on Law & AI, 2023.
+                  </p>
+                  <p id="ref-10">
+                    [10] L. Roberts, AI Interview Tools in HR and Qualitative
+                    Research, J. Appl. Psychol. Tech., 2022.
+                  </p>
+                  <p id="ref-11">
+                    [11] B. Carter, Static Question Banks vs. Dynamic
+                    Interviewing with AI, Comput. Soc. Sci. Rev., 2021.
+                  </p>
+                  <p id="ref-12">
+                    [12] K. Verma, "Multimodal Stress Detection Using FER, SER,
+                    and HRV," IEEE Trans. Biomed. Eng., Vols. vol. 68, no. 11, p.
+                    pp. 3421–3432, 2021.
+                  </p>
+                  <p id="ref-13">
+                    [13] AERA, APA, and NCME, Standards for Educational and
+                    Psychological Testing., Washington, DC: AERA, 2014.
+                  </p>
+                  <p id="ref-14">
+                    [14] D. Richardson, Bias and Accountability in AI Criminal
+                    Justice Systems, Ethics & Info. Tech., 2022.
+                  </p>
+                  <p id="ref-15">
+                    [15] M. Johansson, Behavioral Profiling and Multimodal Fusion
+                    in Forensic Science, Forensic Psychol. Int., 2023.
+                  </p>
+                  <p id="ref-16">
+                    [16] Y. Z. a. F. Lin, Reinforcement Learning for Social
+                    Interaction Analysis, IEEE Trans. Affect. Comput., 2021.
+                  </p>
                 </div>
               </div>
             </div>

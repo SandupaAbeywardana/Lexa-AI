@@ -20,7 +20,7 @@ export const projectData = {
       id: 2,
       name: "Kaveesha Karunarathna",
       role: "Group Leader",
-      image: "/images/members/kaveesha.jpg",
+      image: "/images/members/kaveesha.png",
       email: "kaveesha5karunarathna@gmail.com",
       github: "https://github.com/KaveeshaKaru",
       linkedin: "https://www.linkedin.com/in/kaveesha-karunarathna",
